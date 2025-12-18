@@ -38,11 +38,16 @@ body {
     text-align: right;
     color: rgb(104, 111, 123);
     font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #container h1 {
     width: 100%;
     font-size: 3rem;
+    font-weight: 300;
     text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #buttonHolder {
     width: 100%;
@@ -71,6 +76,10 @@ button {
 }
 button:active {
     scale: 0.9;
+}
+button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 .modifiers {
     background-color: rgb(33, 36, 44);

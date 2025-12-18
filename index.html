@@ -14,28 +14,28 @@
     </head>
     <body class="flex-col">
         <div id="container" class="flex-col">
-            <p id="subExpression">7 x</p>
-            <h1>0</h1>
+            <p id="subExpression"></p>
+            <h1 id="display">0</h1>
             <div id="buttonHolder">
-                <button class="modifiers">AC</button>
-                <button class="modifiers">+/-</button>
-                <button class="modifiers">%</button>
-                <button class="operators">/</button>
+                <button disabled class="modifiers">AC</button>
+                <button disabled class="modifiers">+/-</button>
+                <button disabled class="modifiers">%</button>
+                <button disabled class="operators">/</button>
                 <button class="operands">7</button>
                 <button class="operands">8</button>
                 <button class="operands">9</button>
-                <button class="operators">X</button>
+                <button disabled class="operators">x</button>
                 <button class="operands">4</button>
                 <button class="operands">5</button>
                 <button class="operands">6</button>
-                <button class="operators">-</button>
+                <button disabled class="operators">-</button>
                 <button class="operands">1</button>
                 <button class="operands">2</button>
                 <button class="operands">3</button>
-                <button class="operators">+</button>
+                <button disabled class="operators">+</button>
                 <button class="operands wide">0</button>
                 <button class="operands">.</button>
-                <button class="operators" id="calculate">=</button>
+                <button disabled class="operators" id="calculate">=</button>
             </div>
             <p id="deleteInstruction" class="flex-row"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.142 20C8.91458 20 7.80085 20 6.87114 19.4986C5.94144 18.9971 5.35117 18.0781 4.17061 16.24L3.48981 15.18C2.4966 13.6336 2 12.8604 2 12C2 11.1396 2.4966 10.3664 3.48981 8.82001L4.17061 7.76001C5.35117 5.92191 5.94144 5.00286 6.87114 4.50143C7.80085 4 8.91458 4 11.142 4L13.779 4C17.6544 4 19.5921 4 20.7961 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.7961 18.8284C19.5921 20 17.6544 20 13.779 20H11.142Z" stroke="rgb(75, 80, 90)" stroke-width="1.5"></path> <path d="M15.5 9.50002L10.5 14.5M10.5 9.5L15.5 14.5" stroke="rgb(75, 80, 90)" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>Backspace to delete</p>
         </div>
