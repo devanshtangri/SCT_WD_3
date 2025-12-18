@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid white; */
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
