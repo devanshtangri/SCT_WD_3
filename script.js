@@ -14,6 +14,7 @@ let displayNumber = "", first, result;
 //Helper Variables //
 
 
+// Number Input Handlers //
 function numberInput (input) {
     if (/^\d$/.test(input.key) || (input.key === "." && !displayNumber.includes("."))) {
         if (display.innerHTML === "0") {
@@ -43,7 +44,10 @@ function deleteCharacter (input) {
         display.innerHTML = displayNumber;
     }
 }
+// Number Input Handlers //
 
+
+// Enable all operations after Number Input //
 function enableFunctions (input) {
     if (/^\d$/.test(input.key) || (input.key === "." && !displayNumber.includes("."))) {
         buttons.forEach((v) => { v.disabled = false; });
@@ -53,7 +57,10 @@ function enableFunctions (input) {
         operands.forEach((v) => { v.removeEventListener("click", enableFunctions); })
     }
 }
+// Enable all operations after Number Input //
 
+
+// Apply Special Operators //
 function applyModifier (input) {
     if (input.target.innerHTML === "AC" || input.key === "Escape") {
         subExp.innerHTML = "";
@@ -71,7 +78,10 @@ function applyModifier (input) {
     }
     input.target.blur();
 }
+// Apply Special Operators //
 
+
+// Apply Operator Handler //
 function applyOperatorKeypress (input) {
     if ("+-*/".includes(input.key)) {
         if (subExp.innerHTML === "") {
@@ -97,7 +107,10 @@ function applyOperatorClick (input) {
         input.target.blur();
     }
 }
+// Apply Operator Handler //
 
+
+// Equals Operator Handler //
 function calculateResult (input) {
     if (subExp.innerHTML !== "" && (input.type === "click" || input.key === "Enter")) {
         let operator = subExp.innerHTML.charAt(subExp.innerHTML.length - 2);
@@ -118,7 +131,10 @@ function calculateResult (input) {
         input.target.blur();
     }
 }
+// Equals Operator Handler //
 
+
+// Event Listeners //
 document.addEventListener("keypress", numberInput);
 document.addEventListener("keypress", enableFunctions);
 operands.forEach((v) => {
@@ -139,3 +155,4 @@ document.addEventListener("keypress", applyOperatorKeypress);
 
 calculate.addEventListener("click", calculateResult);
 document.addEventListener("keypress", calculateResult);
+// Event Listeners //
