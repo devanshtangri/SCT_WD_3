@@ -49,7 +49,7 @@ function deleteCharacter (input) {
 
 // Enable all operations after Number Input //
 function enableFunctions (input) {
-    if (/^\d$/.test(input.key) || (input.key === "." && !displayNumber.includes("."))) {
+    if (/^\d$/.test(input.key) || (input.key === "." && !displayNumber.includes(".")) || input.type === "click") {
         buttons.forEach((v) => { v.disabled = false; });
         document.removeEventListener("keypress", enableFunctions);
     } else if (input.type === "click") {
